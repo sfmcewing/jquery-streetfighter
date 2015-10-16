@@ -26,10 +26,30 @@ $(document).ready(function() {
     		);
   	})
   	.mouseup(function() {
-    // ryu goes back to his ready position
+    // ryu goes back to his ready position when mouse leaves
     	$('.ryu-throwing').hide();
     	$('.ryu-ready').show();
   });
+    // keydown "x" to show cool pose
+    $("body").keydown(function(e) {
+      if(e.which == 88) {
+        // hide everything and only show ryu-cool
+        $('.ryu-still').hide();
+        $('.ryu-ready').hide();
+        $('.hadouken').hide();
+        $('.ryu-cool').show();
+      }
+    })
+
+    // release "x" to go back to ryu-still
+    $("body").keyup(function(e) {
+      if(e.which == 88) {
+        $('.ryu-ready').hide();
+        $('.ryu-cool').hide();
+        $('.hadouken').hide();
+        $('.ryu-still').show();
+      }
+    })
 });
 
 function playHadouken () {
