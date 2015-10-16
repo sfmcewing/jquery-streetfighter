@@ -62,3 +62,13 @@ body {
 .ryu-cool {
 	background-image: url('../images/ryu-cool.gif');
 }
+
+.instructions {
+	position: absolute;
+  	left: 800px;
+  	width: 600px;
+  	padding-top: 0px;
+  	font-family: cursive;
+  	font-weight: 500;
+  	font-size: 25px;
+}
